@@ -45,7 +45,7 @@ class Config:
             self.cache_config['port'] = os.environ.get('distributed_session_parameters_port')
 
         if os.environ.get('distributed_session_parameters_password') is not None:
-            self.cache_config['password'] = int(os.environ.get('distributed_session_parameters_password'))
+            self.cache_config['password'] = os.environ.get('distributed_session_parameters_password')
 
         print(self.cache_config)
 
