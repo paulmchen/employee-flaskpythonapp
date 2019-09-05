@@ -35,7 +35,7 @@ class Config:
         if os.environ.get('relational_database_parameters_db_name') is not None:
             self.db_config['db'] = os.environ.get('relational_database_parameters_db_name')
 
-        print(self.db_config)
+        # print(self.db_config)
 
         # load redis settings from environment variables if set
         if os.environ.get('distributed_session_parameters_host') is not None:
@@ -47,7 +47,7 @@ class Config:
         if os.environ.get('distributed_session_parameters_password') is not None:
             self.cache_config['password'] = os.environ.get('distributed_session_parameters_password')
 
-        print(self.cache_config)
+        # print(self.cache_config)
 
     def get_db_config(self):
         return self.db_config
