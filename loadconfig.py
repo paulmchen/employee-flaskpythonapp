@@ -8,7 +8,7 @@ class Config:
                   host='localhost',
                   user='root',
                   port=3306,
-                  password='Huawei@123',
+                  password='password',
                   db='mypolls'
                 )
 
@@ -16,7 +16,7 @@ class Config:
         self.cache_config = dict(
                  host='127.0.0.1',
                  port=6379,
-                 password='Huawei@123'
+                 password='password'
         )
 
         # load db settings from environment variables if set
