@@ -20,32 +20,32 @@ class Config:
         )
 
         # load db settings from environment variables if set
-        if os.environ.get('relational_database_parameters_db_host') is not None:
-            self.db_config['host'] = os.environ.get('relational_database_parameters_db_host')
+        if os.environ.get('RELATIONAL_DATABASE_HOST') is not None:
+            self.db_config['host'] = os.environ.get('RELATIONAL_DATABASE_HOST')
 
-        if os.environ.get('relational_database_parameters_db_user') is not None:
-            self.db_config['user'] = os.environ.get('relational_database_parameters_db_user')
+        if os.environ.get('RELATIONAL_DATABASE_DB_USER') is not None:
+            self.db_config['user'] = os.environ.get('RELATIONAL_DATABASE_DB_USER')
 
-        if os.environ.get('relational_database_parameters_db_port') is not None:
-            self.db_config['port'] = int(os.environ.get('relational_database_parameters_db_port'))
+        if os.environ.get('RELATIONAL_DATABASE_PORT') is not None:
+            self.db_config['port'] = int(os.environ.get('RELATIONAL_DATABASE_PORT'))
 
-        if os.environ.get('relational_database_parameters_password') is not None:
-            self.db_config['password'] = os.environ.get('relational_database_parameters_password')
+        if os.environ.get('RELATIONAL_DATABASE_PASSWORD') is not None:
+            self.db_config['password'] = os.environ.get('RELATIONAL_DATABASE_PASSWORD')
 
-        if os.environ.get('relational_database_parameters_db_name') is not None:
-            self.db_config['db'] = os.environ.get('relational_database_parameters_db_name')
+        if os.environ.get('RELATIONAL_DATABASE_DB_NAME') is not None:
+            self.db_config['db'] = os.environ.get('RELATIONAL_DATABASE_DB_NAME')
 
         # print(self.db_config)
 
         # load redis settings from environment variables if set
-        if os.environ.get('distributed_session_parameters_host') is not None:
-            self.cache_config['host'] = os.environ.get('distributed_session_parameters_host')
+        if os.environ.get('DISTRIBUTED_CACHE_HOST') is not None:
+            self.cache_config['host'] = os.environ.get('DISTRIBUTED_CACHE_HOST')
 
-        if os.environ.get('distributed_session_parameters_port') is not None:
-            self.cache_config['port'] = os.environ.get('distributed_session_parameters_port')
+        if os.environ.get('DISTRIBUTED_CACHE_PORT') is not None:
+            self.cache_config['port'] = os.environ.get('DISTRIBUTED_CACHE_PORT')
 
-        if os.environ.get('distributed_session_parameters_password') is not None:
-            self.cache_config['password'] = os.environ.get('distributed_session_parameters_password')
+        if os.environ.get('DISTRIBUTED_CACHE_PASSWORD') is not None:
+            self.cache_config['password'] = os.environ.get('DISTRIBUTED_CACHE_PASSWORD')
 
         # print(self.cache_config)
 
