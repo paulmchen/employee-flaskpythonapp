@@ -14,14 +14,11 @@ cache = Cache()
 
 @app.route('/list')
 def list_employees():
-
     def db_query():
         emps= cache.get_conn().get('listemp')
-
         if emps is None:
             emps= str(db.list_employees())
             print("employees list loaded from the db:", emps)
-
             # write into the cache
             cache.get_conn().set("listemp", str(emps))
         else:
@@ -31,7 +28,6 @@ def list_employees():
 
     # query db to get the list of the employees
     res = db_query()
-
     return render_template('employees.html', result=res, content_type='application/json')
 
 
